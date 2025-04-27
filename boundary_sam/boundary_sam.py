@@ -37,14 +37,12 @@ class BoundarySAM:
         
         # this effects the guided filter and it depends on the size of the image
         # for the datasets we use, we tested for 128 and 256 and we use 2 and 4 respectively.
-        # you can always just use PCA enhancemend wihtout the filters, it does most of the work and is non parametric. 
+        # you can always just use PCA enhancemend wihtout the filters, it does most of the work and it is non parametric. 
         if im_width == 128:
             r_selected = 2
-        elif im_width == 256:
+        elif im_width >= 256:
             r_selected = 4
-            
-            
-        
+
         # set the image to get the embeddings
         self.mask_generator.predictor.set_image(im)
         

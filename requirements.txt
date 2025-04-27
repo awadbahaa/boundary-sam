@@ -1,0 +1,7 @@
+segment-anything
+pycocotools
+scikit-image
+shapely
+scikit-learn
+matplotlib
+opencv-contrib-python
